@@ -12,12 +12,21 @@ import {
     View,
 } from 'react-native';
 
-var Main = require('./RNComponent/RNMain/Main');
+var LaunchImage = require('./RNComponent/RNMain/LanuchImage');
 
 export default class BuyApp extends Component {
     render() {
         return (
-            <Main/>
+            <Navigator
+                initialRoute={{name:'LanuchImage',component:LaunchImage}}
+                configureScene={()=>{
+                    return Navigator.SceneConfigs.PushFromRight;
+                }}
+                renderScene={(route,navigator) => {
+                    let Component = route.component;
+                    return <Component {...route.passProps} navigator={navigator}/>;
+                }}
+            />
         );
     }
 }

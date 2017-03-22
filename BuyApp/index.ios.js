@@ -10,7 +10,9 @@ import {
     StyleSheet,
     Text,
     View,
+    Navigator,
 } from 'react-native';
+
 
 var Main = require('./RNComponent/RNMain/Main');
 

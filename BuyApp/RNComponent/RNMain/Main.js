@@ -73,4 +73,5 @@ const styles = StyleSheet.create({
         height: 24,
     }
 });
+
 module.exports = Main;
