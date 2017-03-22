@@ -10,6 +10,7 @@ import {
     StyleSheet,
     Text,
     View,
+    Navigator,
 } from 'react-native';
 
 var LaunchImage = require('./RNComponent/RNMain/LanuchImage');
