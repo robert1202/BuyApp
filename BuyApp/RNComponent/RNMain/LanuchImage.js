@@ -18,7 +18,7 @@ export default class LanuchImage extends React.Component {
 
     render() {
         return (
-            <Image source={{uri: 'LaunchImage',scale: 2}} style={styles.launchImageStyle}/>
+            <Image source={{uri: 'launchimage'}} style={styles.launchImageStyle}/>
 
         );
     }
