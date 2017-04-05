@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         justifyContent:'space-around',
         position:'absolute',
         bottom:0,
-
+        width: width,
     },
 
     bottomInnerViewStyle:{

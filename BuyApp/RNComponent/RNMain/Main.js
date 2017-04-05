@@ -20,7 +20,7 @@ class Main extends Component {
         super(props);
 
         this.state = {
-            selectedTab : 'more'
+            selectedTab : 'home'
         };
     }
 

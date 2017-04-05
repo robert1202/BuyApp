@@ -31,8 +31,38 @@ export default class Home extends React.Component {
                 <TouchableOpacity onPress={this._pressButton.bind(this)}>
                     <Text>点我跳转</Text>
                 </TouchableOpacity>
+
+                <TouchableOpacity onPress={this.connectionSoceket}>
+                    <Text>链接socket</Text>
+                </TouchableOpacity>
             </View>
         );
+    }
+
+    connectionSoceket(){
+        console.log('will connection ');
+
+        var ws = new WebSocket('ws://grab.moxian.com/mo_grab/webSocketServer');
+
+        ws.onopen = () => {
+            // 建立连接
+            ws.send('something');
+        };
+
+        ws.onmessage = (e) => {
+            // 收到了消息
+            console.log(e.data);
+        };
+
+        ws.onerror = (e) => {
+            // 有错误发生
+            console.log(e.message);
+        };
+
+        ws.onclose = (e) => {
+            // 连接关闭
+            console.log(e.code, e.reason);
+        };
     }
 }
 
